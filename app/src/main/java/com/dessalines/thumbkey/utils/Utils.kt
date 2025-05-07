@@ -290,47 +290,47 @@ fun swipeDirection(
         when (swipeType) {
             // 0 degrees = down, increasing counter-clockwise
             SwipeNWay.EIGHT_WAY -> return when (angle) {
-                in 22.5..67.5 -> SwipeDirection.BOTTOM_RIGHT
-                in 67.5..112.5 -> SwipeDirection.RIGHT
-                in 112.5..157.5 -> SwipeDirection.TOP_RIGHT
-                in 157.5..202.5 -> SwipeDirection.TOP
-                in 202.5..247.5 -> SwipeDirection.TOP_LEFT
-                in 247.5..292.5 -> SwipeDirection.LEFT
-                in 292.5..337.5 -> SwipeDirection.BOTTOM_LEFT
+                in 22.5..<67.5 -> SwipeDirection.BOTTOM_RIGHT
+                in 67.5..<112.5 -> SwipeDirection.RIGHT
+                in 112.5..<157.5 -> SwipeDirection.TOP_RIGHT
+                in 157.5..<202.5 -> SwipeDirection.TOP
+                in 202.5..<247.5 -> SwipeDirection.TOP_LEFT
+                in 247.5..<292.5 -> SwipeDirection.LEFT
+                in 292.5..<337.5 -> SwipeDirection.BOTTOM_LEFT
                 else -> SwipeDirection.BOTTOM
             }
 
             SwipeNWay.FOUR_WAY_CROSS -> return when (angle) {
-                in 45.0..135.0 -> SwipeDirection.RIGHT
-                in 135.0..225.0 -> SwipeDirection.TOP
-                in 225.0..315.0 -> SwipeDirection.LEFT
+                in 45.0..<135.0 -> SwipeDirection.RIGHT
+                in 135.0..<225.0 -> SwipeDirection.TOP
+                in 225.0..<315.0 -> SwipeDirection.LEFT
                 else -> SwipeDirection.BOTTOM
             }
 
             SwipeNWay.FOUR_WAY_DIAGONAL -> return when (angle) {
-                in 0.0..90.0 -> SwipeDirection.BOTTOM_RIGHT
-                in 90.0..180.0 -> SwipeDirection.TOP_RIGHT
-                in 180.0..270.0 -> SwipeDirection.TOP_LEFT
+                in 0.0..<90.0 -> SwipeDirection.BOTTOM_RIGHT
+                in 90.0..<180.0 -> SwipeDirection.TOP_RIGHT
+                in 180.0..<270.0 -> SwipeDirection.TOP_LEFT
                 else -> SwipeDirection.BOTTOM_LEFT
             }
 
             SwipeNWay.TWO_WAY_HORIZONTAL -> return when (angle) {
-                in 0.0..180.0 -> SwipeDirection.RIGHT
+                in 0.0..<180.0 -> SwipeDirection.RIGHT
                 else -> SwipeDirection.LEFT
             }
 
             SwipeNWay.TWO_WAY_VERTICAL -> return when (angle) {
-                in 90.0..270.0 -> SwipeDirection.TOP
+                in 90.0..<270.0 -> SwipeDirection.TOP
                 else -> SwipeDirection.BOTTOM
             }
 
             SwipeNWay.TWO_WAY_DIAGONAL_FORWARD -> return when (angle) {
-                in 45.0..225.0 -> SwipeDirection.TOP_RIGHT
+                in 45.0..<225.0 -> SwipeDirection.TOP_RIGHT
                 else -> SwipeDirection.BOTTOM_LEFT
             }
 
             SwipeNWay.TWO_WAY_DIAGONAL_BACKWARD -> return when (angle) {
-                in 135.0..315.0 -> SwipeDirection.TOP_LEFT
+                in 135.0..<315.0 -> SwipeDirection.TOP_LEFT
                 else -> SwipeDirection.BOTTOM_RIGHT
             }
         }
