@@ -160,6 +160,7 @@ import com.dessalines.thumbkey.keyboards.KB_KZ_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_LT_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_LV_LTG_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_MATH_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_NE_ES_TWELVE_KEY
 import com.dessalines.thumbkey.keyboards.KB_MY_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_NL_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_NL_TYPESPLIT
@@ -331,6 +332,7 @@ enum class KeyboardLayout(
     PLMessagEase(KB_PL_MESSAGEASE), // polski messagease
     ENMessagEaseCompose(KB_EN_MESSAGEASE_COMPOSE), // english messagease compose
     BRFRThumbKey(KB_BR_FR_THUMBKEY), // brezhoneg français thumb-key
+    ENESTwelveKey(KB_NE_ES_TWELVE_KEY),
     ENMessagEaseTwoHands(KB_EN_MESSAGEASE_TWO_HANDS), // english messagease two-hands
     ENDEThumbKey(KB_EN_DE_THUMBKEY), // english deutsch thumb-key
     ENHRMessagEase(KB_EN_HR_MESSAGEASE), // english hrvatski messagease

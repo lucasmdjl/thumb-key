@@ -333,6 +333,30 @@ fun swipeDirection(
                 in 135.0..<315.0 -> SwipeDirection.TOP_LEFT
                 else -> SwipeDirection.BOTTOM_RIGHT
             }
+
+            SwipeNWay.THREE_WAY_SKEWED_TOP_LEFT -> return when (angle) {
+                in 45.0..<135.0 -> SwipeDirection.RIGHT
+                in 135.0..<315.0 -> SwipeDirection.TOP_LEFT
+                else -> SwipeDirection.BOTTOM
+            }
+
+            SwipeNWay.THREE_WAY_SKEWED_TOP_RIGHT -> return when (angle) {
+                in 45.0..<225.0 -> SwipeDirection.TOP_RIGHT
+                in 225.0..<315.0 -> SwipeDirection.LEFT
+                else -> SwipeDirection.BOTTOM
+            }
+
+            SwipeNWay.THREE_WAY_SKEWED_BOTTOM_LEFT -> return when (angle) {
+                in 45.0..<135.0 -> SwipeDirection.RIGHT
+                in 135.0..<225.0 -> SwipeDirection.TOP
+                else -> SwipeDirection.BOTTOM_LEFT
+            }
+
+            SwipeNWay.THREE_WAY_SKEWED_BOTTOM_RIGHT -> return when (angle) {
+                in 135.0..<225.0 -> SwipeDirection.TOP
+                in 225.0..<315.0 -> SwipeDirection.LEFT
+                else -> SwipeDirection.BOTTOM_RIGHT
+            }
         }
     } else {
         return null
