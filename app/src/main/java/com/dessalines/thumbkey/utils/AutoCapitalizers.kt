@@ -45,3 +45,17 @@ fun autoCapitalizeIApostropheLL(ime: IMEService) {
         }
     }
 }
+
+fun autoCapitalizeStarI(ime: IMEService) {
+    // Capitalizes "*i"
+    val textBefore = ime.currentInputConnection.getTextBeforeCursor(3, 0)
+    if (!textBefore.isNullOrEmpty()) {
+        if (textBefore.trimStart() == "*i") {
+            ime.currentInputConnection.deleteSurroundingText(2, 0)
+            ime.currentInputConnection.commitText(
+                "*I",
+                1,
+            )
+        }
+    }
+}
