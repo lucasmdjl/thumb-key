@@ -8,7 +8,7 @@ fun autoCapitalizeI(ime: IMEService) {
     // Capitalizes 'i'
     val textBefore = ime.currentInputConnection.getTextBeforeCursor(3, 0)
     if (!textBefore.isNullOrEmpty()) {
-        if (textBefore == " i ") {
+        if (textBefore.trimStart() == "i ") {
             ime.currentInputConnection.deleteSurroundingText(2, 0)
             ime.currentInputConnection.commitText(
                 "I ",
@@ -22,7 +22,7 @@ fun autoCapitalizeIApostrophe(ime: IMEService) {
     // Capitalizes "i'"
     val textBefore = ime.currentInputConnection.getTextBeforeCursor(3, 0)
     if (!textBefore.isNullOrEmpty()) {
-        if (textBefore == " i\'") {
+        if (textBefore.trimStart() == "i\'") {
             ime.currentInputConnection.deleteSurroundingText(2, 0)
             ime.currentInputConnection.commitText(
                 "I\'",
@@ -36,7 +36,7 @@ fun autoCapitalizeIApostropheLL(ime: IMEService) {
     // Capitalizes "i'll"
     val textBefore = ime.currentInputConnection.getTextBeforeCursor(5, 0)
     if (!textBefore.isNullOrEmpty()) {
-        if (textBefore == " i\'ll") {
+        if (textBefore.trimStart() == "i\'ll") {
             ime.currentInputConnection.deleteSurroundingText(4, 0)
             ime.currentInputConnection.commitText(
                 "I\'ll",
