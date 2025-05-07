@@ -364,6 +364,8 @@ enum class SwipeNWay {
     FOUR_WAY_DIAGONAL,
     TWO_WAY_VERTICAL,
     TWO_WAY_HORIZONTAL,
+    TWO_WAY_DIAGONAL_FORWARD,
+    TWO_WAY_DIAGONAL_BACKWARD,
 }
 
 enum class SlideType {

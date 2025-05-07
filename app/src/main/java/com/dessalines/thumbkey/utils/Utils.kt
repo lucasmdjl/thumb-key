@@ -323,6 +323,16 @@ fun swipeDirection(
                 in 90.0..270.0 -> SwipeDirection.TOP
                 else -> SwipeDirection.BOTTOM
             }
+
+            SwipeNWay.TWO_WAY_DIAGONAL_FORWARD -> return when (angle) {
+                in 45.0..225.0 -> SwipeDirection.TOP_RIGHT
+                else -> SwipeDirection.BOTTOM_LEFT
+            }
+
+            SwipeNWay.TWO_WAY_DIAGONAL_BACKWARD -> return when (angle) {
+                in 135.0..315.0 -> SwipeDirection.TOP_LEFT
+                else -> SwipeDirection.BOTTOM_RIGHT
+            }
         }
     } else {
         return null
