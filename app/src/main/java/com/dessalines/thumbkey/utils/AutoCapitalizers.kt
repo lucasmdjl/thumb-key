@@ -59,3 +59,22 @@ fun autoCapitalizeStarI(ime: IMEService) {
         }
     }
 }
+
+fun autoCorrectZou(ime: IMEService) {
+    val textBefore = ime.currentInputConnection.getTextBeforeCursor(4, 0)
+    if (!textBefore.isNullOrEmpty()) {
+        if (textBefore.trimStart() == "zou") {
+            ime.currentInputConnection.deleteSurroundingText(3, 0)
+            ime.currentInputConnection.commitText(
+                "you",
+                1,
+            )
+        } else if (textBefore.trimStart() == "Zou") {
+            ime.currentInputConnection.deleteSurroundingText(3, 0)
+            ime.currentInputConnection.commitText(
+                "You",
+                1,
+            )
+        }
+    }
+}
