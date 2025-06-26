@@ -320,6 +320,7 @@ val KB_NE_ES_TWELVE_KEY: KeyboardDefinition =
                         ::autoCapitalizeI,
                         ::autoCapitalizeStarI,
                         ::autoCapitalizeIApostrophe,
+                        ::autoCorrectZou
                     ),
             ),
     )
