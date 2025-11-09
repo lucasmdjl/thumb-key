@@ -78,3 +78,25 @@ fun autoCorrectZou(ime: IMEService) {
         }
     }
 }
+
+fun autoCorrectNn(ime: IMEService) {
+    val textBefore = ime.currentInputConnection.getTextBeforeCursor(2, 0)
+    if (!textBefore.isNullOrEmpty()) {
+        if (textBefore.trimStart() == "ñn") {
+            ime.currentInputConnection.deleteSurroundingText(1, 0)
+        }
+    }
+}
+
+private val autocorrect7pattern = Regex("[a-z]7[a-z]")
+
+fun autoCorrect7(ime: IMEService) {
+    val textBefore = ime.currentInputConnection.getTextBeforeCursor(3, 0)
+    if (!textBefore.isNullOrEmpty()) {
+        if (textBefore.trimStart().matches(autocorrect7pattern)) {
+            val lastChar = textBefore.last()
+            ime.currentInputConnection.deleteSurroundingText(2, 0)
+            ime.currentInputConnection.commitText("r $lastChar", 1)
+        }
+    }
+}
