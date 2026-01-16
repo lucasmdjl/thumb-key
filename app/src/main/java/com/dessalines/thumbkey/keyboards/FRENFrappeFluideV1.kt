@@ -417,7 +417,7 @@ val FRENCH_FLUID_NUMERIC_KEYBOARD =
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
                 ),
-                SPACEBAR_FRENCH_KEY_ITEM.copy(widthMultiplier = 2),
+                SPACEBAR_FRENCH_KEY_ITEM.copy(sizeMultiplier = 2),
                 RETURN_KEY_ITEM,
             ),
         ),

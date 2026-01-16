@@ -167,7 +167,7 @@ fun Copy<KeyItemC>.modifyKeyItemC(serializable: KeyItemCSerializable) {
 
     KeyItemC.longPress transform { modifyLongPress(it, serializable.longPress) }
 
-    KeyItemC.widthMultiplier transform { serializable.widthMultiplier ?: it }
+    KeyItemC.sizeMultiplier transform { serializable.sizeMultiplier ?: it }
     KeyItemC.backgroundColor transform { serializable.backgroundColor ?: it }
     KeyItemC.swipeType transform { serializable.swipeType ?: it }
     KeyItemC.slideType transform { serializable.slideType ?: it }
@@ -453,7 +453,7 @@ data class KeyItemCSerializable(
     val bottom: KeyCSerializable? = null,
     val bottomRight: KeyCSerializable? = null,
     var longPress: KeyCSerializable? = null,
-    var widthMultiplier: Int? = null,
+    var sizeMultiplier: Int? = null,
     var backgroundColor: ColorVariant? = null,
     var swipeType: SwipeNWay? = null,
     var slideType: SlideType? = null,

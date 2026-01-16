@@ -149,13 +149,13 @@ val TWO_HANDS_NUMERIC_ARROWS_KEYBOARD =
             listOf(
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 EMOJI_KEY_ITEM,
                 RETURN_KEY_ITEM,
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 RETURN_KEY_ITEM,
             ),

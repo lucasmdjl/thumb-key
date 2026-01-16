@@ -2,6 +2,9 @@ package com.dessalines.thumbkey.utils
 
 import android.view.KeyEvent
 import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontFamily
 import arrow.optics.optics
@@ -48,10 +51,25 @@ data class KeyboardDefinition(
     companion object
 }
 
+enum class LayoutType(
+    val mayor: @Composable (@Composable () -> Unit) -> Unit,
+    val minor: @Composable (@Composable () -> Unit) -> Unit,
+) {
+    ColLike(
+        mayor = { Row { it() } },
+        minor = { Column { it() } },
+    ),
+    RowLike(
+        mayor = { Column { it() } },
+        minor = { Row { it() } },
+    ),
+}
+
 @optics
 // Almost a 4x4 grid, but the bottom is mostly spacebar
 data class KeyboardC(
     val arr: List<List<KeyItemC>>,
+    val layoutType: LayoutType = LayoutType.RowLike,
 ) {
     companion object
 }
@@ -68,7 +86,7 @@ data class KeyItemC(
     val bottom: KeyC? = null,
     val bottomLeft: KeyC? = null,
     val nextTapActions: List<KeyAction>? = null,
-    val widthMultiplier: Int = 1,
+    val sizeMultiplier: Int = 1,
     val backgroundColor: ColorVariant = ColorVariant.SURFACE,
     val swipeType: SwipeNWay = SwipeNWay.EIGHT_WAY,
     val slideType: SlideType = SlideType.NONE,

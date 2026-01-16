@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -75,6 +74,7 @@ import com.dessalines.thumbkey.utils.KeyAction
 import com.dessalines.thumbkey.utils.KeyboardLayout
 import com.dessalines.thumbkey.utils.KeyboardMode
 import com.dessalines.thumbkey.utils.KeyboardPosition
+import com.dessalines.thumbkey.utils.LayoutType
 import com.dessalines.thumbkey.utils.TAG
 import com.dessalines.thumbkey.utils.getAutoKeyWidth
 import com.dessalines.thumbkey.utils.getKeyboardMode
@@ -286,6 +286,7 @@ fun KeyboardScreen(
                         Column {
                             KeyboardKey(
                                 key = key,
+                                layoutType = LayoutType.ColLike,
                                 lastAction = lastAction,
                                 legendHeight = legendHeight,
                                 legendWidth = legendWidth,
@@ -432,9 +433,12 @@ fun KeyboardScreen(
                                 .background(color = MaterialTheme.colorScheme.surfaceVariant),
                     )
                 }
-                Column {
+                val layoutType = keyboard.layoutType
+                val Major = layoutType.mayor
+                val Minor = layoutType.minor
+                Major {
                     keyboard.arr.forEachIndexed { i, row ->
-                        Row {
+                        Minor {
                             row.forEachIndexed { j, key ->
                                 Column {
                                     val ghostKey =
@@ -453,6 +457,7 @@ fun KeyboardScreen(
                                         }
                                     KeyboardKey(
                                         key = key,
+                                        layoutType = layoutType,
                                         ghostKey = ghostKey,
                                         lastAction = lastAction,
                                         legendHeight = legendHeight,

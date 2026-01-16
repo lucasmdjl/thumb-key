@@ -91,7 +91,7 @@ val NUMERIC_KEYBOARD_FLIPPED =
             listOf(
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 SPACEBAR_SKINNY_KEY_ITEM,
                 RETURN_KEY_ITEM,

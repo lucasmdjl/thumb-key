@@ -52,7 +52,7 @@ val EN_TYPESPLIT_SHORT_SPACEBAR_SHIFT_KEY_ITEM =
                 swipeReturnAction = ToggleCurrentWordCapitalization(false),
             ),
         backgroundColor = SURFACE_VARIANT,
-        widthMultiplier = 3,
+        sizeMultiplier = 3,
     )
 
 val EN_TYPESPLIT_SHORT_RETURN_KEY_ITEM =
@@ -117,7 +117,7 @@ val EN_TYPESPLIT_SHORT_SPACEBAR_SHIFT_KEY_SHIFTED_ITEM =
                 color = MUTED,
             ),
         backgroundColor = SURFACE_VARIANT,
-        widthMultiplier = 3,
+        sizeMultiplier = 3,
     )
 
 val EN_TYPESPLIT_SHORT_SPACEBAR_ARROWS_KEY_ITEM =
@@ -174,7 +174,7 @@ val EN_TYPESPLIT_SHORT_SPACEBAR_ARROWS_KEY_ITEM =
                 color = MUTED,
             ),
         backgroundColor = SURFACE_VARIANT,
-        widthMultiplier = 3,
+        sizeMultiplier = 3,
     )
 
 val KB_EN_TYPESPLIT_SHORT_MAIN =

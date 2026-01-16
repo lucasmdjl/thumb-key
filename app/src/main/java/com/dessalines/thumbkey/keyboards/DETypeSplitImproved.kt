@@ -225,7 +225,7 @@ val KB_DE_TYPESPLIT_IMPROVED_MAIN =
                             ReplaceLastText("; "),
                         ),
                     backgroundColor = SURFACE_VARIANT,
-                    widthMultiplier = 3,
+                    sizeMultiplier = 3,
                 ),
                 KeyItemC(
                     center =
@@ -463,7 +463,7 @@ val KB_DE_TYPESPLIT_IMPROVED_SHIFTED =
                             ReplaceLastText("; "),
                         ),
                     backgroundColor = SURFACE_VARIANT,
-                    widthMultiplier = 3,
+                    sizeMultiplier = 3,
                 ),
                 KeyItemC(
                     center =
@@ -683,7 +683,7 @@ val KB_DE_TYPESPLIT_IMPROVED_NUMERIC =
                             ReplaceLastText("; "),
                         ),
                     backgroundColor = SURFACE_VARIANT,
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 KeyItemC(
                     center = KeyC("0", size = LARGE),

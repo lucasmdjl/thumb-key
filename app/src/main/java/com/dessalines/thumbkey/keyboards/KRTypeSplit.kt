@@ -119,7 +119,7 @@ val KB_KR_TYPESPLIT_MAIN =
                     slideType = SlideType.DELETE,
                     left = DELETE_WORD_BEFORE_CURSOR_KEYC,
                     right = DELETE_WORD_AFTER_CURSOR_KEYC,
-                    widthMultiplier = 3,
+                    sizeMultiplier = 3,
                     backgroundColor = SURFACE_VARIANT,
                 ),
                 RETURN_KEY_ITEM,

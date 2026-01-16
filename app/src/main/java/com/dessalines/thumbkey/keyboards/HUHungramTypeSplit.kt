@@ -163,7 +163,7 @@ val KB_HU_HUNGRAM_MAIN =
             listOf(
                 NUMERIC_KEY_ITEM_ALT,
                 BACKSPACE_KEY_ITEM,
-                SPACEBAR_PROGRAMMING_KEY_ITEM.copy(widthMultiplier = 2),
+                SPACEBAR_PROGRAMMING_KEY_ITEM.copy(sizeMultiplier = 2),
                 RETURN_KEY_ITEM,
                 EMOJI_KEY_ITEM_ALT,
             ),
@@ -323,7 +323,7 @@ val KB_HU_HUNGRAM_SHIFTED =
             listOf(
                 NUMERIC_KEY_ITEM_ALT,
                 BACKSPACE_KEY_ITEM,
-                SPACEBAR_PROGRAMMING_KEY_ITEM.copy(widthMultiplier = 2),
+                SPACEBAR_PROGRAMMING_KEY_ITEM.copy(sizeMultiplier = 2),
                 RETURN_KEY_ITEM,
                 EMOJI_KEY_ITEM_ALT,
             ),

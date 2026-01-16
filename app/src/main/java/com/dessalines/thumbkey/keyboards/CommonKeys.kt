@@ -263,7 +263,7 @@ val BACKSPACE_KEY_ITEM =
         longPress = DeleteWordBeforeCursor,
     )
 
-val BACKSPACE_WIDE_KEY_ITEM = BACKSPACE_KEY_ITEM.copy(widthMultiplier = 3)
+val BACKSPACE_WIDE_KEY_ITEM = BACKSPACE_KEY_ITEM.copy(sizeMultiplier = 3)
 
 val SPACEBAR_LEFT_KEYC =
     KeyC(
@@ -308,10 +308,10 @@ val SPACEBAR_KEY_ITEM =
         bottomRight = NEXT_WORD_AFTER_CURSOR_KEYC,
         nextTapActions = SPACEBAR_NEXT_TAP_ACTIONS,
         backgroundColor = SURFACE_VARIANT,
-        widthMultiplier = 3,
+        sizeMultiplier = 3,
     )
-val SPACEBAR_SKINNY_KEY_ITEM = SPACEBAR_KEY_ITEM.copy(widthMultiplier = 1)
-val SPACEBAR_DOUBLE_KEY_ITEM = SPACEBAR_KEY_ITEM.copy(widthMultiplier = 2)
+val SPACEBAR_SKINNY_KEY_ITEM = SPACEBAR_KEY_ITEM.copy(sizeMultiplier = 1)
+val SPACEBAR_DOUBLE_KEY_ITEM = SPACEBAR_KEY_ITEM.copy(sizeMultiplier = 2)
 
 val SPACEBAR_TOP_KEYC =
     KeyC(
@@ -345,7 +345,7 @@ val SPACEBAR_PROGRAMMING_KEY_ITEM =
         top = SPACEBAR_TOP_KEYC,
         bottom = SPACEBAR_BOTTOM_KEYC,
         backgroundColor = SURFACE_VARIANT,
-        widthMultiplier = 3,
+        sizeMultiplier = 3,
     )
 
 val RETURN_KEYC =
@@ -475,7 +475,7 @@ val BACKSPACE_TYPESPLIT_KEY_ITEM =
                 action = ToggleShiftMode(true),
                 color = SECONDARY,
             ),
-        widthMultiplier = 3,
+        sizeMultiplier = 3,
         backgroundColor = SURFACE_VARIANT,
     )
 val BACKSPACE_TYPESPLIT_SHIFTED_KEY_ITEM =
@@ -500,7 +500,7 @@ val SPACEBAR_FRENCH_KEY_ITEM =
         nextTapActions = SPACEBAR_FRENCH_NEXT_TAP_ACTIONS,
     )
 
-val SPACEBAR_FRENCH_SKINNY_KEY_ITEM = SPACEBAR_FRENCH_KEY_ITEM.copy(widthMultiplier = 1)
+val SPACEBAR_FRENCH_SKINNY_KEY_ITEM = SPACEBAR_FRENCH_KEY_ITEM.copy(sizeMultiplier = 1)
 
 val SPACEBAR_FRENCH_TYPESPLIT_MIDDLE_KEY_ITEM =
     SPACEBAR_TYPESPLIT_MIDDLE_KEY_ITEM.copy(
@@ -525,6 +525,6 @@ val SPACEBAR_FARSI_KEY_ITEM =
             ),
     )
 
-val SPACEBAR_FARSI_SKINNY_KEY_ITEM = SPACEBAR_FARSI_KEY_ITEM.copy(widthMultiplier = 1)
+val SPACEBAR_FARSI_SKINNY_KEY_ITEM = SPACEBAR_FARSI_KEY_ITEM.copy(sizeMultiplier = 1)
 
 val SPACEBAR_ZERO_KEY_ITEM = SPACEBAR_KEY_ITEM.copy(longPress = CommitText("0"))

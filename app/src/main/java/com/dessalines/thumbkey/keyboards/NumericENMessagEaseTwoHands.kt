@@ -169,7 +169,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
             listOf(
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 KeyItemC(
                     center = KeyC(" "),
@@ -186,7 +186,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                 RETURN_KEY_ITEM,
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 KeyItemC(
                     center = KeyC(" "),

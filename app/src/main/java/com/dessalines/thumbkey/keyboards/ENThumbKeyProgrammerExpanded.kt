@@ -420,7 +420,7 @@ val NUMERIC_KEYBOARD_EXPANDED =
                 ),
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 SPACEBAR_SKINNY_KEY_ITEM,
                 RETURN_KEY_ITEM,
@@ -562,7 +562,7 @@ val NUMERIC_KEYBOARD_EXPANDED_SHIFTED =
                 ),
                 KeyItemC(
                     center = KeyC("0", size = LARGE),
-                    widthMultiplier = 2,
+                    sizeMultiplier = 2,
                 ),
                 SPACEBAR_SKINNY_KEY_ITEM,
                 RETURN_KEY_ITEM,

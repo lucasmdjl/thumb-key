@@ -59,6 +59,7 @@ import com.dessalines.thumbkey.utils.KeyDisplay
 import com.dessalines.thumbkey.utils.KeyItemC
 import com.dessalines.thumbkey.utils.KeyboardDefinitionSettings
 import com.dessalines.thumbkey.utils.KeyboardPosition
+import com.dessalines.thumbkey.utils.LayoutType
 import com.dessalines.thumbkey.utils.Selection
 import com.dessalines.thumbkey.utils.SlideType
 import com.dessalines.thumbkey.utils.SwipeDirection
@@ -86,6 +87,7 @@ import kotlin.time.TimeSource
 @Composable
 fun KeyboardKey(
     key: KeyItemC,
+    layoutType: LayoutType,
     // Hidden background key to detect swipes for. When a swipe isn't captured by the key, the ghost
     // key will attempt to capture it instead. This is derived automatically from the keyboard
     // layout, and should not be set directly in the keyboard definition.
@@ -198,8 +200,14 @@ fun KeyboardKey(
 
     val keyboardKeyModifier =
         Modifier
-            .height(keyHeight.dp)
-            .width(keyWidth.dp * key.widthMultiplier)
+            .height(when (layoutType) {
+                LayoutType.ColLike -> keyHeight.dp * key.sizeMultiplier
+                LayoutType.RowLike -> keyHeight.dp
+            })
+            .width(when (layoutType) {
+                LayoutType.ColLike -> keyHeight.dp
+                LayoutType.RowLike -> keyHeight.dp * key.sizeMultiplier
+            })
             .padding(keyPadding.dp)
             .clip(RoundedCornerShape(keyRadius.dp))
             .then(
